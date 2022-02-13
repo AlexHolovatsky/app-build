@@ -1,0 +1,15 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+    - echo "Test"
+  build:
+    commands:
+    - mvn clean install
+  post_build:
+    command:
+    - echo "Test2"
+    - mv /target/lavagna ./
+artifacts:
+  files:
+    - deploy/**/
