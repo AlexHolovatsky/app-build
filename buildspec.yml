@@ -1,5 +1,8 @@
 version: 0.2
 phases:
+  install:
+    runtime-versions:
+      java: corretto8
   pre_build:
     commands:
     - echo "Test"
@@ -12,4 +15,5 @@ phases:
     - mv /target/lavagna ./
 artifacts:
   files:
-    - deploy/**/
+    - appspec.yml
+    - target/lavagna.war

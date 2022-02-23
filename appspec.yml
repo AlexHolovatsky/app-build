@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: /target/lavagna.war
+    destination: /var/lib/tomcat/webapps
+permissions: 
+  - object: / 
+    pattern: "**" 
+    owner: tomcat 
+    group: tomcat
