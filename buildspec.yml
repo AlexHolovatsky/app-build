@@ -8,12 +8,10 @@ phases:
     - echo "Test"
   build:
     commands:
-    - mvn clean install
+    - mvn clean prepare-package war:exploded
   post_build:
     command:
-    - echo "Test2"
     - mv /target/lavagna ./
 artifacts:
   files:
-    - appspec.yml
-    - target/lavagna.war
+    - deploy/**/*
