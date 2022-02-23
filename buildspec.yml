@@ -12,7 +12,7 @@ phases:
   post_build:
     command:
     - echo "Test2"
-    - mv /target/lavagna.war lavagna.war
+    - mv /lavagna.war lavagna.war
 artifacts:
   files:
     - appspec.yml
