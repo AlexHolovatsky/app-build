@@ -8,17 +8,11 @@ phases:
     - echo "Test"
   build:
     commands:
-    - mvn clean prepare-package war:exploded
+    - mvn clean install
   post_build:
     command:
-    - mv /target/lavagna .
+    - echo "Test2"
+    - mv /target/lavagna.war lavagna.war
 artifacts:
-  type: zip
   files:
-    - 'ROOT/WEB-INF/**/*'
-    - 'ROOT/WEB-INF/classes/*'
-    - 'ROOT/WEB-INF/classes/**/*'
-    - 'ROOT/WEB-INF/lib/*'
-    - 'ROOT/WEB-INF/lib-provided/*'
-    - 'ROOT/WEB-INF/js/*'
-    - 'ROOT/org/springframework/boot/loader/*'
+    - lavagna.war
