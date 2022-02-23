@@ -11,7 +11,14 @@ phases:
     - mvn clean prepare-package war:exploded
   post_build:
     command:
-    - mv /target/lavagna ./
+    - mv /target/lavagna .
 artifacts:
+  type: zip
   files:
-    - deploy/**/*
+    - 'ROOT/WEB-INF/**/*'
+    - 'ROOT/WEB-INF/classes/*'
+    - 'ROOT/WEB-INF/classes/**/*'
+    - 'ROOT/WEB-INF/lib/*'
+    - 'ROOT/WEB-INF/lib-provided/*'
+    - 'ROOT/WEB-INF/js/*'
+    - 'ROOT/org/springframework/boot/loader/*'
