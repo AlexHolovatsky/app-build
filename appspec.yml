@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /target/lavagna.war
-    destination: /usr/share/tomcat/webapps/lavagna.war
+    destination: /var/lib/tomcat/webapps
 permissions: 
   - object: / 
     pattern: "**" 
