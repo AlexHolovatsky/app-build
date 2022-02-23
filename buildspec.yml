@@ -15,4 +15,5 @@ phases:
     - mv /target/lavagna.war lavagna.war
 artifacts:
   files:
+    - appspec.yml
     - lavagna.war

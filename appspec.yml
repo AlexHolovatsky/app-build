@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /target/lavagna.war
+  - source: /lavagna.war
     destination: /var/lib/tomcat/webapps
 permissions: 
   - object: / 
